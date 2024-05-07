@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="h-screen flex justify-center items-center">
+        <form method="post" action="/do-login" th:object="${request}" class="flex flex-col gap-2 w-80">
+            <img class="self-center rounded-full w-[100px] h-[100px]" src="https://picsum.photos/100" />
+            <input th:field="*{email}" class="border-2 px-4 py-2 rounded-lg" placeholder="Email" type="email"/>
+            <input th:field="*{senha}" class="border-2 px-4 py-2 rounded-lg" placeholder="Senha" type="password"/>
+            <button class="bg-indigo-900 hover:bg-indigo-700 rounded-lg px-4 py-2 text-white">
+                Entrar
+            </button>
+            <p class="italic text-red-500 text-center" th:text="${mensagem}">asdasdasd</p>
+        </form>
+    </div>
+</body>
+</html>
