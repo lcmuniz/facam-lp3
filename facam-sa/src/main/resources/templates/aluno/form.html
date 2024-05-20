@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alunos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div class="flex flex-col gap-4 p-4">
+    <h1 class="font-bold text-2xl">Novo Aluno</h1>
+    <div class="flex gap-4">
+        <form method="post" th:object="${aluno}" action="/aluno/salvar" class="flex flex-col gap-4 w-full">
+            <input th:field="*{alunoId}" type="hidden" />
+            <div>
+                <label>Nome</label>
+                <input th:field="*{nome}" class="border-2 py-2 px-4 w-full"/>
+            </div>
+            <div>
+                <label>Email</label>
+                <input type="email" th:field="*{email}" class="border-2 py-2 px-4 w-full"/>
+            </div>
+            <div>
+                <label>Celular</label>
+                <input th:field="*{celular}"  class="border-2 py-2 px-4 w-full"/>
+            </div>
+            <div class="self-end">
+                <button class="bg-indigo-900 w-28 px-4 py-2">
+                    <div class="flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                        </svg>
+                    </div>
+                </button>
+                <a href="#" onclick="javascript:history.back()" class="inline-block bg-yellow-500 w-28 px-4 py-2 cursor-pointer">
+                    <div class="flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,7 +1,6 @@
 package com.acme.facamsa.controller;
 
 import com.acme.facamsa.entity.Usuario;
-import com.acme.facamsa.request.PesquisarRequest;
 import com.acme.facamsa.service.AlunoService;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +24,8 @@ public class MainController {
 
         var alunos = alunoService.obterAlunos();
         model.addAttribute("alunos", alunos);
-        model.addAttribute("request", new PesquisarRequest());
-        return "home";
+        model.addAttribute("request", new AlunoController.PesquisarRequest());
+        return "aluno/index";
     }
 
 }
