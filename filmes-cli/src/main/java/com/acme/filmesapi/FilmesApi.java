@@ -1,4 +1,4 @@
-package com.acme.demo5;
+package com.acme.filmesapi;
 
 import lombok.val;
 

@@ -1,4 +1,4 @@
-package com.acme.demo5;
+package com.acme.filmesapi;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

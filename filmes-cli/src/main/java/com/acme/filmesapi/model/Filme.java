@@ -1,4 +1,4 @@
-package com.acme.demo5.model;
+package com.acme.filmesapi.model;
 
 import lombok.Data;
 
